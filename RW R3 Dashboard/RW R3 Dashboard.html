@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recruiting 'Round Rochester | RochesterWorks</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rw-blue: #1a3a8f;
+    --rw-blue-mid: #2650c8;
+    --rw-blue-bright: #3b6ef6;
+    --rw-blue-light: #e8eeff;
+    --rw-gold: #f5a623;
+    --rw-green: #1ab87a;
+    --rw-dark: #0d1b4b;
+    --rw-text: #1a2340;
+    --rw-muted: #6b7a9e;
+    --rw-border: #d9e2f7;
+    --rw-white: #ffffff;
+    --rw-bg: #f4f7ff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--rw-bg);
+    color: var(--rw-text);
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--rw-white);
+    border-bottom: 1px solid var(--rw-border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(26,58,143,0.08);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--rw-blue);
+    text-decoration: none;
+  }
+
+  .nav-logo svg { width: 28px; height: 28px; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--rw-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--rw-blue-bright); }
+
+  .btn-register {
+    background: var(--rw-blue-bright);
+    color: white !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600 !important;
+    transition: background 0.2s, transform 0.15s !important;
+  }
+
+  .btn-register:hover {
+    background: var(--rw-blue) !important;
+    transform: translateY(-1px);
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0d1b4b 0%, #1a3a8f 40%, #2650c8 75%, #3b6ef6 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 2rem 3rem;
+    min-height: 480px;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 120px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpolygon fill='%23f4f7ff' points='0,120 0,60 50,90 100,40 150,80 200,30 250,70 300,20 350,65 400,15 450,60 500,10 550,55 600,5 650,50 700,0 750,45 800,10 850,50 900,5 950,50 1000,15 1050,55 1100,20 1150,60 1200,25 1200,120'/%3E%3C/svg%3E") no-repeat bottom center;
+    background-size: cover;
+  }
+
+  .hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    backdrop-filter: blur(8px);
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 7px; height: 7px;
+    background: #7dd3fc;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 600;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 span {
+    color: #93c5fd;
+    font-style: italic;
+    display: block;
+  }
+
+  .hero-sub {
+    color: rgba(255,255,255,0.82);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 480px;
+  }
+
+  /* COUNTDOWN */
+  .countdown-box {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    min-width: 260px;
+  }
+
+  .countdown-label {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .count-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .count-num {
+    font-family: 'Fraunces', serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1;
+    min-width: 2.5ch;
+    text-align: center;
+  }
+
+  .count-sep {
+    font-family: 'Fraunces', serif;
+    font-size: 2.4rem;
+    color: rgba(255,255,255,0.4);
+    line-height: 1;
+    padding-top: 2px;
+  }
+
+  .count-word {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-top: 4px;
+  }
+
+  /* EVENT INFO CARDS */
+  .info-strip {
+    max-width: 1100px;
+    margin: -30px auto 0;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .info-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 20px rgba(26,58,143,0.1);
+    border: 1px solid var(--rw-border);
+    animation: slideUp 0.6s ease both;
+  }
+
+  .info-card:nth-child(2) { animation-delay: 0.1s; }
+  .info-card:nth-child(3) { animation-delay: 0.2s; }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .info-icon {
+    width: 44px; height: 44px;
+    background: var(--rw-blue-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .info-icon svg { width: 22px; height: 22px; color: var(--rw-blue-bright); }
+
+  .info-card strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--rw-text);
+  }
+
+  .info-card span {
+    font-size: 0.82rem;
+    color: var(--rw-muted);
+  }
+
+  .info-card a {
+    color: var(--rw-blue-bright);
+    text-decoration: none;
+  }
+
+  .info-card a:hover { text-decoration: underline; }
+
+  /* MAIN CONTENT */
+  .main-grid {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 0 2rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* EMPLOYERS SECTION */
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-header h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--rw-dark);
+  }
+
+  .section-header p {
+    color: var(--rw-muted);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+  }
+
+  .search-bar {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  .search-bar svg {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px; height: 18px;
+    color: var(--rw-muted);
+  }
+
+  .search-bar input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.75rem;
+    border: 1.5px solid var(--rw-border);
+    border-radius: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--rw-text);
+    background: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+
+  .search-bar input:focus {
+    border-color: var(--rw-blue-bright);
+    box-shadow: 0 0 0 3px rgba(59,110,246,0.1);
+  }
+
+  .search-bar input::placeholder { color: var(--rw-muted); }
+
+  /* EMPLOYER CARDS */
+  .employer-card {
+    background: white;
+    border-radius: 20px;
+    border: 1.5px solid var(--rw-border);
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(26,58,143,0.06);
+    transition: box-shadow 0.2s;
+  }
+
+  .employer-card:hover { box-shadow: 0 6px 24px rgba(26,58,143,0.12); }
+
+  .employer-accent { height: 5px; }
+  .accent-sunshine { background: linear-gradient(90deg, #f5a623, #ff6b35); }
+  .accent-youth { background: linear-gradient(90deg, #3b6ef6, #6b3bf6); }
+  .accent-epi { background: linear-gradient(90deg, #9333ea, #e11d48); }
+
+  .employer-header {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .employer-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .employer-logo {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+  }
+
+  .logo-sunshine { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
+  .logo-youth { background: linear-gradient(135deg, #e8eeff, #dde4ff); }
+  .logo-epi { background: linear-gradient(135deg, #fce7f3, #f5d0fe); }
+
+  .employer-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--rw-text);
+  }
+
+  .employer-desc {
+    font-size: 0.82rem;
+    color: var(--rw-muted);
+    margin-top: 2px;
+    max-width: 340px;
+  }
+
+  .toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--rw-blue-bright);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .toggle-btn:hover { background: var(--rw-blue-light); }
+
+  .toggle-btn svg {
+    width: 16px; height: 16px;
+    transition: transform 0.3s;
+  }
+
+  .toggle-btn.open svg { transform: rotate(180deg); }
+
+  .jobs-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    border-top: 1.5px solid transparent;
+  }
+
+  .jobs-panel.open {
+    max-height: 600px;
+    border-top-color: var(--rw-border);
+  }
+
+  .jobs-grid {
+    padding: 1.25rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .job-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: var(--rw-text);
+    background: var(--rw-bg);
+    transition: background 0.15s;
+  }
+
+  .job-item:hover { background: var(--rw-blue-light); }
+
+  .job-item svg {
+    width: 14px; height: 14px;
+    color: var(--rw-muted);
+    flex-shrink: 0;
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 3rem;
+    color: var(--rw-muted);
+    font-size: 0.95rem;
+    display: none;
+  }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  .sidebar-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1.5px solid var(--rw-border);
+    box-shadow: 0 2px 12px rgba(26,58,143,0.06);
+  }
+
+  .sidebar-card.cta-card {
+    background: linear-gradient(135deg, var(--rw-blue-bright), var(--rw-blue));
+    border-color: transparent;
+  }
+
+  .sidebar-card.cta-card h3 { color: white; }
+
+  .sidebar-card.cta-card p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.875rem;
+    margin: 0.5rem 0 1.25rem;
+    line-height: 1.5;
+  }
+
+  .sidebar-card h3 {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--rw-dark);
+    margin-bottom: 0.25rem;
+  }
+
+  .sidebar-card .loc-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: var(--rw-blue-bright);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+  }
+
+  .sidebar-card .loc-label svg { width: 14px; height: 14px; }
+
+  .address-block {
+    font-size: 0.9rem;
+    color: var(--rw-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .address-block a {
+    color: var(--rw-blue-bright);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.2s;
+  }
+
+  .address-block a:hover { text-decoration-color: var(--rw-blue-bright); }
+
+  .map-placeholder {
+    background: var(--rw-bg);
+    border: 1.5px solid var(--rw-border);
+    border-radius: 12px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .map-placeholder svg { width: 36px; height: 36px; color: var(--rw-blue-bright); opacity: 0.5; }
+
+  .btn-full {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+  }
+
+  .btn-white {
+    background: white;
+    color: var(--rw-blue);
+  }
+
+  .btn-white:hover {
+    background: var(--rw-blue-light);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline-dark {
+    background: rgba(255,255,255,0.12);
+    color: white;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    margin-top: 0.5rem;
+  }
+
+  .btn-outline-dark:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+  }
+
+  .btn-full svg { width: 16px; height: 16px; }
+
+  /* Resume support card */
+  .sidebar-card.resume-card {
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+    border-color: #a7f3d0;
+  }
+
+  .resume-card h3 { color: #065f46; }
+  .resume-card .chat-icon {
+    width: 36px; height: 36px;
+    background: #10b981;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .resume-card .chat-icon svg { width: 18px; height: 18px; color: white; }
+  .resume-card p { font-size: 0.85rem; color: #047857; margin-bottom: 1rem; line-height: 1.5; }
+
+  .btn-green {
+    background: #10b981;
+    color: white;
+    border: none;
+  }
+
+  .btn-green:hover { background: #059669; transform: translateY(-1px); }
+
+  /* Tips card */
+  .tips-list { list-style: none; margin-top: 0.75rem; }
+
+  .tips-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--rw-muted);
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--rw-border);
+    line-height: 1.4;
+  }
+
+  .tips-list li:last-child { border-bottom: none; }
+
+  .tip-dot {
+    width: 6px; height: 6px;
+    background: var(--rw-gold);
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--rw-dark);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+
+  footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+  footer a:hover { color: white; }
+
+  footer strong {
+    display: block;
+    color: white;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero-content { grid-template-columns: 1fr; }
+    .countdown-box { min-width: unset; }
+    .info-strip { grid-template-columns: 1fr; margin-top: 1rem; }
+    .main-grid { grid-template-columns: 1fr; }
+    .jobs-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="28" height="28" rx="7" fill="#1a3a8f"/>
+      <path d="M7 10h14M7 14h10M7 18h12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    RochesterWorks
+  </a>
+  <ul class="nav-links">
+    <li><a href="#employers">Employers</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="https://www.eventbrite.com/e/on-site-recruiting-event-at-rochesterworks-42-tickets-1985283152351" target="_blank" class="btn-register">Register</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge">On-Site Recruiting Event</div>
+      <h1>Recruiting 'Round<span>Rochester</span></h1>
+      <p class="hero-sub">Connecting talented Rochester job seekers with employers making a real impact in our community.</p>
+    </div>
+    <div class="countdown-box">
+      <div class="countdown-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Event Starts In
+      </div>
+      <div class="countdown-grid">
+        <div class="count-unit"><div class="count-num" id="cd-days">--</div><div class="count-word">Days</div></div>
+        <div class="count-unit"><div class="count-num" id="cd-hours">--</div><div class="count-word">Hours</div></div>
+        <div class="count-unit"><div class="count-num" id="cd-mins">--</div><div class="count-word">Mins</div></div>
+        <div class="count-unit"><div class="count-num" id="cd-secs">--</div><div class="count-word">Secs</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <div class="info-card">
+    <div class="info-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    </div>
+    <div>
+      <strong>Thursday, April 2</strong>
+      <span>2026</span>
+    </div>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    </div>
+    <div>
+      <strong>9:00 AM - 11:00 AM</strong>
+      <span>2 Hours of Opportunity</span>
+    </div>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    </div>
+    <div>
+      <strong>100 College Ave</strong>
+      <span>Rochester, NY &mdash; <a href="https://maps.app.goo.gl/ECAbsFd6it1XJDvj7" target="_blank">First Floor</a></span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-grid">
+
+  <!-- EMPLOYERS -->
+  <div id="employers">
+    <div class="section-header">
+      <h2>Participating Employers</h2>
+      <p>Learn about our partners and browse open roles</p>
+    </div>
+
+    <div class="search-bar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="search-input" placeholder="Search roles..." oninput="filterJobs(this.value)">
+    </div>
+
+    <!-- Sunshine Village -->
+    <div class="employer-card" data-employer="sunshine">
+      <div class="employer-accent accent-sunshine"></div>
+      <div class="employer-header" onclick="toggleCard(this)">
+        <div class="employer-info">
+          <div class="employer-logo logo-sunshine">☀️</div>
+          <div>
+            <div class="employer-name">Sunshine Village Childcare Center</div>
+            <div class="employer-desc">Providing a village of care for children in the Rochester community.</div>
+          </div>
+        </div>
+        <button class="toggle-btn">
+          About Employer
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+      </div>
+      <div class="jobs-panel">
+        <div class="jobs-grid">
+          <div class="job-item" data-role="drivers"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Drivers</div>
+          <div class="job-item" data-role="teachers"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Teachers</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center for Youth -->
+    <div class="employer-card" data-employer="youth">
+      <div class="employer-accent accent-youth"></div>
+      <div class="employer-header" onclick="toggleCard(this)">
+        <div class="employer-info">
+          <div class="employer-logo logo-youth">🤝</div>
+          <div>
+            <div class="employer-name">The Center for Youth</div>
+            <div class="employer-desc">Empowering youth to reach their full potential through counseling, shelter, and support.</div>
+          </div>
+        </div>
+        <button class="toggle-btn">
+          About Employer
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+      </div>
+      <div class="jobs-panel">
+        <div class="jobs-grid">
+          <div class="job-item" data-role="assistant program manager"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Assistant Program Manager</div>
+          <div class="job-item" data-role="childcare provider"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Childcare Provider</div>
+          <div class="job-item" data-role="community navigator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Community Navigator</div>
+          <div class="job-item" data-role="community prevention counselor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Community Prevention Counselor</div>
+          <div class="job-item" data-role="emergency shelter case manager"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Emergency Shelter Case Manager</div>
+          <div class="job-item" data-role="emergency shelter counselor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Emergency Shelter Counselor</div>
+          <div class="job-item" data-role="family navigator crisis nursery"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Family Navigator - Crisis Nursery</div>
+          <div class="job-item" data-role="life skills specialist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Life Skills Specialist</div>
+          <div class="job-item" data-role="prevention education specialist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Prevention Education Specialist</div>
+          <div class="job-item" data-role="rapid rehousing specialist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Rapid Rehousing Specialist</div>
+          <div class="job-item" data-role="school-based counselor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>School-Based Counselor</div>
+          <div class="job-item" data-role="street outreach specialist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Street Outreach Specialist</div>
+          <div class="job-item" data-role="workforce recruitment retention manager"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Workforce Recruitment and Retention Manager</div>
+          <div class="job-item" data-role="youth engagement advocate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Youth Engagement Advocate</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EPI -->
+    <div class="employer-card" data-employer="epi">
+      <div class="employer-accent accent-epi"></div>
+      <div class="employer-header" onclick="toggleCard(this)">
+        <div class="employer-info">
+          <div class="employer-logo logo-epi">✨</div>
+          <div>
+            <div class="employer-name">Empowering People's Independence (EPI)</div>
+            <div class="employer-desc">Providing comprehensive support and services for people with disabilities.</div>
+          </div>
+        </div>
+        <button class="toggle-btn">
+          About Employer
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+      </div>
+      <div class="jobs-panel">
+        <div class="jobs-grid">
+          <div class="job-item" data-role="behavioral tech supervisor lcsw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Behavioral Tech Supervisor (LCSW)</div>
+          <div class="job-item" data-role="community direct support professional"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Community Direct Support Professional</div>
+          <div class="job-item" data-role="maintenance technician days"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Maintenance Technician (Days)</div>
+          <div class="job-item" data-role="quality improvement specialist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Quality Improvement Specialist</div>
+          <div class="job-item" data-role="residential direct support professional"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Residential Direct Support Professional</div>
+          <div class="job-item" data-role="residential supervisor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Residential Supervisor</div>
+          <div class="job-item" data-role="self-direction coordinator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Self-Direction Coordinator</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no-results" id="no-results">No roles match your search. Try a different keyword.</div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- Register CTA -->
+    <div class="sidebar-card cta-card">
+      <h3>Secure Your Spot</h3>
+      <p>Pre-registration is encouraged! We'll send you event updates and a professional reminder the day before.</p>
+      <a href="https://www.eventbrite.com/e/on-site-recruiting-event-at-rochesterworks-42-tickets-1985283152351" target="_blank" class="btn-full btn-white">
+        Register on Eventbrite
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+
+    <!-- Location -->
+    <div class="sidebar-card" id="location">
+      <div class="loc-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Event Location
+      </div>
+      <h3>RochesterWorks Career Center</h3>
+      <div class="address-block">
+        <a href="https://maps.app.goo.gl/ECAbsFd6it1XJDvj7" target="_blank">100 College Ave, First Floor</a><br>
+        Rochester, NY 14607
+      </div>
+      <div class="map-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <a href="https://maps.app.goo.gl/ECAbsFd6it1XJDvj7" target="_blank" class="btn-full btn-outline-dark" style="background:#f4f7ff;color:var(--rw-blue);border:1.5px solid var(--rw-border);">
+        Open Google Maps
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+
+    <!-- Resume Support -->
+    <div class="sidebar-card resume-card">
+      <div class="chat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <h3>Resume Support</h3>
+      <p>Need a professional review before the event? Meet with an advisor for free.</p>
+      <a href="https://rochesterworks.org" target="_blank" class="btn-full btn-green">
+        Book Appointment
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+
+    <!-- Tips -->
+    <div class="sidebar-card">
+      <h3>Day-of Tips</h3>
+      <ul class="tips-list">
+        <li><div class="tip-dot"></div>Bring multiple copies of your resume</li>
+        <li><div class="tip-dot"></div>Dress professionally for success</li>
+        <li><div class="tip-dot"></div>No proof of registration needed - just show up!</li>
+        <li><div class="tip-dot"></div>Arrive early - event runs 9:00-11:00 AM only</li>
+        <li><div class="tip-dot"></div>Come ready to connect with recruiters directly</li>
+      </ul>
+    </div>
+
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>RochesterWorks</strong>
+  RochesterWorks is an equal opportunity program. Auxiliary aids and services are available upon request for individuals with disabilities.<br>
+  Call <a href="tel:5852583500">585-258-3500</a> to speak with a representative.<br><br>
+  <a href="https://rochesterworks.org" target="_blank">rochesterworks.org</a>
+</footer>
+
+<script>
+  // COUNTDOWN
+  const eventDate = new Date('2026-04-02T09:00:00');
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = eventDate - now;
+    if (diff <= 0) {
+      document.getElementById('cd-days').textContent = '0';
+      document.getElementById('cd-hours').textContent = '0';
+      document.getElementById('cd-mins').textContent = '0';
+      document.getElementById('cd-secs').textContent = '0';
+      return;
+    }
+    const days = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins = Math.floor((diff % 3600000) / 60000);
+    const secs = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+    document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // TOGGLE CARDS
+  function toggleCard(header) {
+    const panel = header.nextElementSibling;
+    const btn = header.querySelector('.toggle-btn');
+    const isOpen = panel.classList.contains('open');
+    panel.classList.toggle('open', !isOpen);
+    btn.classList.toggle('open', !isOpen);
+    btn.querySelector('span') && (btn.querySelector('span').textContent = isOpen ? 'About Employer' : 'Hide Jobs');
+  }
+
+  // SEARCH
+  function filterJobs(query) {
+    const q = query.toLowerCase().trim();
+    const cards = document.querySelectorAll('.employer-card');
+    let totalVisible = 0;
+
+    cards.forEach(card => {
+      const items = card.querySelectorAll('.job-item');
+      let cardVisible = 0;
+      items.forEach(item => {
+        const role = item.getAttribute('data-role').toLowerCase();
+        const match = !q || role.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) cardVisible++;
+      });
+
+      if (q && cardVisible > 0) {
+        card.style.display = '';
+        const panel = card.querySelector('.jobs-panel');
+        const btn = card.querySelector('.toggle-btn');
+        panel.classList.add('open');
+        btn.classList.add('open');
+        totalVisible += cardVisible;
+      } else if (q && cardVisible === 0) {
+        card.style.display = 'none';
+      } else {
+        card.style.display = '';
+        totalVisible += items.length;
+      }
+    });
+
+    document.getElementById('no-results').style.display = (q && totalVisible === 0) ? 'block' : 'none';
+  }
+</script>
+</body>
+</html>
