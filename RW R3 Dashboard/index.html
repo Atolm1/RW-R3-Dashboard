@@ -2,1011 +2,371 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recruiting 'Round Rochester | RochesterWorks</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Downtown Job Fair · Oct 22, 2026 · RochesterWorks</title>
+<meta name="description" content="RochesterWorks Downtown Job Fair, Thursday October 22, 2026, 2–4pm at MCC Downtown Campus, 321 State Street, Rochester NY. Nearly 60 employers hiring. Free and open to the public.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --rw-blue: #1a3a8f;
-    --rw-blue-mid: #2650c8;
-    --rw-blue-bright: #3b6ef6;
-    --rw-blue-light: #e8eeff;
-    --rw-gold: #f5a623;
-    --rw-green: #1ab87a;
-    --rw-dark: #0d1b4b;
-    --rw-text: #1a2340;
-    --rw-muted: #6b7a9e;
-    --rw-border: #d9e2f7;
-    --rw-white: #ffffff;
-    --rw-bg: #f4f7ff;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--rw-bg);
-    color: var(--rw-text);
-    min-height: 100vh;
-  }
-
-  /* NAV */
-  nav {
-    background: var(--rw-white);
-    border-bottom: 1px solid var(--rw-border);
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 12px rgba(26,58,143,0.08);
-  }
-
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: 1.15rem;
-    color: var(--rw-blue);
-    text-decoration: none;
-  }
-
-  .nav-logo svg { width: 28px; height: 28px; }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: var(--rw-text);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover { color: var(--rw-blue-bright); }
-
-  .btn-register {
-    background: var(--rw-blue-bright);
-    color: white !important;
-    padding: 0.5rem 1.25rem;
-    border-radius: 8px;
-    font-weight: 600 !important;
-    transition: background 0.2s, transform 0.15s !important;
-  }
-
-  .btn-register:hover {
-    background: var(--rw-blue) !important;
-    transform: translateY(-1px);
-  }
-
-  /* HERO */
-  .hero {
-    background: linear-gradient(135deg, #0d1b4b 0%, #1a3a8f 40%, #2650c8 75%, #3b6ef6 100%);
-    position: relative;
-    overflow: hidden;
-    padding: 5rem 2rem 3rem;
-    min-height: 480px;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 120px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpolygon fill='%23f4f7ff' points='0,120 0,60 50,90 100,40 150,80 200,30 250,70 300,20 350,65 400,15 450,60 500,10 550,55 600,5 650,50 700,0 750,45 800,10 850,50 900,5 950,50 1000,15 1050,55 1100,20 1150,60 1200,25 1200,120'/%3E%3C/svg%3E") no-repeat bottom center;
-    background-size: cover;
-  }
-
-  .hero-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 2rem;
-    align-items: center;
-  }
-
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.25);
-    color: white;
-    padding: 0.4rem 0.9rem;
-    border-radius: 100px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-bottom: 1.25rem;
-    backdrop-filter: blur(8px);
-  }
-
-  .hero-badge::before {
-    content: '';
-    width: 7px; height: 7px;
-    background: #7dd3fc;
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(1.3); }
-  }
-
-  .hero h1 {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
-    font-weight: 600;
-    color: white;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-  }
-
-  .hero h1 span {
-    color: #93c5fd;
-    font-style: italic;
-    display: block;
-  }
-
-  .hero-sub {
-    color: rgba(255,255,255,0.82);
-    font-size: 1.05rem;
-    line-height: 1.6;
-    max-width: 480px;
-  }
-
-  /* COUNTDOWN */
-  .countdown-box {
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 20px;
-    padding: 1.5rem 2rem;
-    text-align: center;
-    min-width: 260px;
-  }
-
-  .countdown-label {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-  }
-
-  .countdown-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
-  }
-
-  .count-unit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .count-num {
-    font-family: 'Fraunces', serif;
-    font-size: 2.4rem;
-    font-weight: 600;
-    color: white;
-    line-height: 1;
-    min-width: 2.5ch;
-    text-align: center;
-  }
-
-  .count-sep {
-    font-family: 'Fraunces', serif;
-    font-size: 2.4rem;
-    color: rgba(255,255,255,0.4);
-    line-height: 1;
-    padding-top: 2px;
-  }
-
-  .count-word {
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.55);
-    margin-top: 4px;
-  }
-
-  /* EVENT INFO CARDS */
-  .info-strip {
-    max-width: 1100px;
-    margin: -30px auto 0;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    position: relative;
-    z-index: 10;
-  }
-
-  .info-card {
-    background: white;
-    border-radius: 16px;
-    padding: 1.25rem 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    box-shadow: 0 4px 20px rgba(26,58,143,0.1);
-    border: 1px solid var(--rw-border);
-    animation: slideUp 0.6s ease both;
-  }
-
-  .info-card:nth-child(2) { animation-delay: 0.1s; }
-  .info-card:nth-child(3) { animation-delay: 0.2s; }
-
-  @keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .info-icon {
-    width: 44px; height: 44px;
-    background: var(--rw-blue-light);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .info-icon svg { width: 22px; height: 22px; color: var(--rw-blue-bright); }
-
-  .info-card strong {
-    display: block;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--rw-text);
-  }
-
-  .info-card span {
-    font-size: 0.82rem;
-    color: var(--rw-muted);
-  }
-
-  .info-card a {
-    color: var(--rw-blue-bright);
-    text-decoration: none;
-  }
-
-  .info-card a:hover { text-decoration: underline; }
-
-  /* MAIN CONTENT */
-  .main-grid {
-    max-width: 1100px;
-    margin: 2.5rem auto;
-    padding: 0 2rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 2rem;
-    align-items: start;
-  }
-
-  /* EMPLOYERS SECTION */
-  .section-header {
-    margin-bottom: 1.5rem;
-  }
-
-  .section-header h2 {
-    font-family: 'Fraunces', serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--rw-dark);
-  }
-
-  .section-header p {
-    color: var(--rw-muted);
-    font-size: 0.9rem;
-    margin-top: 0.25rem;
-  }
-
-  .search-bar {
-    position: relative;
-    margin-bottom: 1.5rem;
-  }
-
-  .search-bar svg {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 18px; height: 18px;
-    color: var(--rw-muted);
-  }
-
-  .search-bar input {
-    width: 100%;
-    padding: 0.75rem 1rem 0.75rem 2.75rem;
-    border: 1.5px solid var(--rw-border);
-    border-radius: 12px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
-    color: var(--rw-text);
-    background: white;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    outline: none;
-  }
-
-  .search-bar input:focus {
-    border-color: var(--rw-blue-bright);
-    box-shadow: 0 0 0 3px rgba(59,110,246,0.1);
-  }
-
-  .search-bar input::placeholder { color: var(--rw-muted); }
-
-  /* EMPLOYER CARDS */
-  .employer-card {
-    background: white;
-    border-radius: 20px;
-    border: 1.5px solid var(--rw-border);
-    margin-bottom: 1.25rem;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(26,58,143,0.06);
-    transition: box-shadow 0.2s;
-  }
-
-  .employer-card:hover { box-shadow: 0 6px 24px rgba(26,58,143,0.12); }
-
-  .employer-accent { height: 5px; }
-  .accent-sunshine { background: linear-gradient(90deg, #f5a623, #ff6b35); }
-  .accent-youth { background: linear-gradient(90deg, #3b6ef6, #6b3bf6); }
-  .accent-epi { background: linear-gradient(90deg, #9333ea, #e11d48); }
-
-  .employer-header {
-    padding: 1.25rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .employer-info {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .employer-logo {
-    width: 52px; height: 52px;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
-    flex-shrink: 0;
-  }
-
-  .logo-sunshine { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
-  .logo-youth { background: linear-gradient(135deg, #e8eeff, #dde4ff); }
-  .logo-epi { background: linear-gradient(135deg, #fce7f3, #f5d0fe); }
-
-  .employer-name {
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--rw-text);
-  }
-
-  .employer-desc {
-    font-size: 0.82rem;
-    color: var(--rw-muted);
-    margin-top: 2px;
-    max-width: 340px;
-  }
-
-  .toggle-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--rw-blue-bright);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.4rem 0.8rem;
-    border-radius: 8px;
-    transition: background 0.2s;
-    white-space: nowrap;
-  }
-
-  .toggle-btn:hover { background: var(--rw-blue-light); }
-
-  .toggle-btn svg {
-    width: 16px; height: 16px;
-    transition: transform 0.3s;
-  }
-
-  .toggle-btn.open svg { transform: rotate(180deg); }
-
-  .jobs-panel {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    border-top: 1.5px solid transparent;
-  }
-
-  .jobs-panel.open {
-    max-height: 600px;
-    border-top-color: var(--rw-border);
-  }
-
-  .jobs-grid {
-    padding: 1.25rem 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-  }
-
-  .job-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0.5rem 0.75rem;
-    border-radius: 8px;
-    font-size: 0.875rem;
-    color: var(--rw-text);
-    background: var(--rw-bg);
-    transition: background 0.15s;
-  }
-
-  .job-item:hover { background: var(--rw-blue-light); }
-
-  .job-item svg {
-    width: 14px; height: 14px;
-    color: var(--rw-muted);
-    flex-shrink: 0;
-  }
-
-  .no-results {
-    text-align: center;
-    padding: 3rem;
-    color: var(--rw-muted);
-    font-size: 0.95rem;
-    display: none;
-  }
-
-  /* SIDEBAR */
-  .sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
-
-  .sidebar-card {
-    background: white;
-    border-radius: 20px;
-    padding: 1.5rem;
-    border: 1.5px solid var(--rw-border);
-    box-shadow: 0 2px 12px rgba(26,58,143,0.06);
-  }
-
-  .sidebar-card.cta-card {
-    background: linear-gradient(135deg, var(--rw-blue-bright), var(--rw-blue));
-    border-color: transparent;
-  }
-
-  .sidebar-card.cta-card h3 { color: white; }
-
-  .sidebar-card.cta-card p {
-    color: rgba(255,255,255,0.8);
-    font-size: 0.875rem;
-    margin: 0.5rem 0 1.25rem;
-    line-height: 1.5;
-  }
-
-  .sidebar-card h3 {
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--rw-dark);
-    margin-bottom: 0.25rem;
-  }
-
-  .sidebar-card .loc-label {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.78rem;
-    color: var(--rw-blue-bright);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.75rem;
-  }
-
-  .sidebar-card .loc-label svg { width: 14px; height: 14px; }
-
-  .address-block {
-    font-size: 0.9rem;
-    color: var(--rw-muted);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
-  .address-block a {
-    color: var(--rw-blue-bright);
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    transition: text-decoration-color 0.2s;
-  }
-
-  .address-block a:hover { text-decoration-color: var(--rw-blue-bright); }
-
-  .map-placeholder {
-    background: var(--rw-bg);
-    border: 1.5px solid var(--rw-border);
-    border-radius: 12px;
-    height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    overflow: hidden;
-  }
-
-  .map-placeholder svg { width: 36px; height: 36px; color: var(--rw-blue-bright); opacity: 0.5; }
-
-  .btn-full {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border-radius: 12px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.2s;
-    border: none;
-  }
-
-  .btn-white {
-    background: white;
-    color: var(--rw-blue);
-  }
-
-  .btn-white:hover {
-    background: var(--rw-blue-light);
-    transform: translateY(-1px);
-  }
-
-  .btn-outline-dark {
-    background: rgba(255,255,255,0.12);
-    color: white;
-    border: 1.5px solid rgba(255,255,255,0.3);
-    margin-top: 0.5rem;
-  }
-
-  .btn-outline-dark:hover {
-    background: rgba(255,255,255,0.2);
-    transform: translateY(-1px);
-  }
-
-  .btn-full svg { width: 16px; height: 16px; }
-
-  /* Resume support card */
-  .sidebar-card.resume-card {
-    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
-    border-color: #a7f3d0;
-  }
-
-  .resume-card h3 { color: #065f46; }
-  .resume-card .chat-icon {
-    width: 36px; height: 36px;
-    background: #10b981;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.75rem;
-  }
-
-  .resume-card .chat-icon svg { width: 18px; height: 18px; color: white; }
-  .resume-card p { font-size: 0.85rem; color: #047857; margin-bottom: 1rem; line-height: 1.5; }
-
-  .btn-green {
-    background: #10b981;
-    color: white;
-    border: none;
-  }
-
-  .btn-green:hover { background: #059669; transform: translateY(-1px); }
-
-  /* Tips card */
-  .tips-list { list-style: none; margin-top: 0.75rem; }
-
-  .tips-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 0.85rem;
-    color: var(--rw-muted);
-    padding: 0.4rem 0;
-    border-bottom: 1px solid var(--rw-border);
-    line-height: 1.4;
-  }
-
-  .tips-list li:last-child { border-bottom: none; }
-
-  .tip-dot {
-    width: 6px; height: 6px;
-    background: var(--rw-gold);
-    border-radius: 50%;
-    margin-top: 5px;
-    flex-shrink: 0;
-  }
-
-  /* FOOTER */
-  footer {
-    background: var(--rw-dark);
-    color: rgba(255,255,255,0.6);
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.82rem;
-    line-height: 1.7;
-  }
-
-  footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
-  footer a:hover { color: white; }
-
-  footer strong {
-    display: block;
-    color: white;
-    font-size: 0.95rem;
-    margin-bottom: 0.25rem;
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    .hero-content { grid-template-columns: 1fr; }
-    .countdown-box { min-width: unset; }
-    .info-strip { grid-template-columns: 1fr; margin-top: 1rem; }
-    .main-grid { grid-template-columns: 1fr; }
-    .jobs-grid { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
-  }
+:root{
+  --blue:#1F6FC0;
+  --blue-deep:#155493;
+  --navy:#16263A;
+  --sky:#E3EEF9;
+  --paper:#F7FAFD;
+  --ink:#16263A;
+  --muted:#4F6278;
+  --line:#CFDDEC;
+  --gold:#E3AE2B;
+  --white:#FFFFFF;
+  --display:"Archivo","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --body:"Public Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  box-sizing:border-box;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:auto;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:var(--blue-deep)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+
+.brandbar{background:var(--white);border-bottom:1px solid var(--line)}
+.brandbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.brandbar img{height:44px;width:auto;display:block}
+.brandbar a.site{font-weight:600;font-size:15px;text-decoration:none}
+.brandbar a.site:hover{text-decoration:underline}
+@media (max-width:480px){.brandbar img{height:32px}.brandbar a.site{display:none}}
+
+/* Hero */
+.hero{background:var(--blue);color:var(--white);position:relative;overflow:hidden}
+.hero-inner{position:relative;z-index:2;padding:56px 0 150px;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:end}
+.kicker{font-weight:600;font-size:16px;margin:0 0 10px;opacity:.92}
+h1{font-family:var(--display);font-stretch:68%;font-weight:900;line-height:.86;margin:0;font-size:clamp(64px,11vw,132px);letter-spacing:-.01em}
+h1 .outline{display:block;color:transparent;-webkit-text-stroke:2px var(--white)}
+.when{font-family:var(--display);font-stretch:85%;font-weight:800;font-size:clamp(22px,3vw,30px);margin:22px 0 4px}
+.where{margin:0;font-size:17px;opacity:.95}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;font-weight:700;text-decoration:none;padding:13px 22px;border-radius:999px;font-size:16px}
+.btn-primary{background:var(--white);color:var(--blue-deep)}
+.btn-primary:hover{background:var(--sky)}
+.btn-ghost{color:var(--white);border:2px solid rgba(255,255,255,.7)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+
+.countdown{background:var(--navy);border-radius:18px;padding:22px 24px 20px}
+.cd-label{margin:0 0 12px;font-weight:600;font-size:15px;color:#BFD3EA}
+.cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
+.cd-num{font-family:var(--display);font-stretch:75%;font-weight:900;font-size:clamp(40px,5.4vw,60px);line-height:1;font-variant-numeric:tabular-nums}
+.cd-unit{font-size:13px;color:#BFD3EA;margin-top:4px}
+.cd-status{font-family:var(--display);font-stretch:85%;font-weight:800;font-size:28px;margin:4px 0 0}
+.skyline{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:150px;z-index:1;display:block}
+
+/* Facts */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--white)}
+.fact{padding:20px 24px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact h2{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 2px}
+.fact p{margin:0;font-weight:700}
+
+section{padding:56px 0 8px}
+h2.sec{font-family:var(--display);font-stretch:80%;font-weight:850;font-size:clamp(30px,4vw,42px);line-height:1.05;margin:0 0 8px}
+.lede{color:var(--muted);margin:0 0 24px;max-width:62ch}
+
+/* Sponsors */
+.sponsors{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sponsor{background:var(--white);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:10px;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.sponsor h3{font-family:var(--display);font-stretch:90%;font-weight:800;font-size:26px;margin:0}
+.sponsor p{margin:2px 0 0;color:var(--muted);font-size:15px}
+.sponsor a{font-weight:700;white-space:nowrap}
+
+/* Employers */
+.tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:14px}
+.search{flex:1 1 280px;position:relative}
+.search input{width:100%;font:inherit;padding:13px 16px;border:2px solid var(--line);border-radius:10px;background:var(--white);color:var(--ink)}
+.search input:focus{border-color:var(--blue);outline:none;box-shadow:0 0 0 3px rgba(31,111,192,.2)}
+.count{color:var(--muted);font-size:15px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{font:inherit;font-size:14px;font-weight:600;padding:7px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--white);color:var(--ink);cursor:pointer}
+.chip:hover{border-color:var(--blue)}
+.chip[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:var(--white)}
+.chip .n{opacity:.7;font-weight:500;margin-left:4px}
+
+.emp-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);background:var(--white)}
+.emp{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.emp a{display:block;padding:16px 18px 15px;text-decoration:none;color:var(--ink);height:100%}
+.emp a:hover{background:var(--sky)}
+.emp-name{font-weight:700;line-height:1.3;display:block}
+.emp-meta{display:flex;gap:8px;align-items:center;margin-top:6px;font-size:14px;color:var(--muted)}
+.emp-jobs{margin-left:auto;color:var(--blue-deep);font-weight:600}
+.tag-sponsor{background:var(--gold);color:var(--navy);font-weight:700;font-size:12px;padding:1px 8px;border-radius:999px}
+.empty{padding:28px;text-align:center;color:var(--muted);background:var(--white);border:1px solid var(--line)}
+.empty button{font:inherit;font-weight:700;color:var(--blue-deep);background:none;border:0;text-decoration:underline;cursor:pointer}
+.note{font-size:14px;color:var(--muted);margin:12px 0 0}
+
+/* Prep */
+.prep{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:step}
+.prep div{border-top:3px solid var(--blue);padding-top:14px}
+.prep h3{margin:0 0 6px;font-size:18px}
+.prep p{margin:0;color:var(--muted)}
+
+/* Accommodations + footer */
+.access{background:var(--sky);border-radius:14px;padding:26px 28px;margin:56px 0 0}
+.access h2{margin:0 0 6px;font-size:20px}
+.access p{margin:0;max-width:70ch}
+footer{margin-top:56px;background:var(--navy);color:#C9D7E8;padding:28px 0 32px;font-size:15px}
+footer p{margin:0 0 6px}
+footer a{color:var(--white)}
+
+@media (max-width:860px){
+  .hero-inner{grid-template-columns:1fr;padding:40px 0 130px}
+  .facts{grid-template-columns:1fr 1fr}
+  .fact:nth-child(2){border-right:0}
+  .fact:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .sponsors,.prep{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .wrap{padding:0 18px}
+  .facts{grid-template-columns:1fr}
+  .fact{border-right:0;border-bottom:1px solid var(--line)}
+  .countdown{padding:18px 14px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a class="nav-logo" href="#">
-    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="28" height="28" rx="7" fill="#1a3a8f"/>
-      <path d="M7 10h14M7 14h10M7 18h12" stroke="white" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    RochesterWorks
-  </a>
-  <ul class="nav-links">
-    <li><a href="#employers">Employers</a></li>
-    <li><a href="#location">Location</a></li>
-    <li><a href="https://www.eventbrite.com/e/on-site-recruiting-event-at-rochesterworks-42-tickets-1985283152351" target="_blank" class="btn-register">Register</a></li>
-  </ul>
-</nav>
+<div class="brandbar"><div class="wrap">
+  <a href="https://rochesterworks.org" target="_blank" rel="noopener"><img src="data:image/webp;base64,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" alt="RochesterWorks" width="397" height="48"></a>
+  <a class="site" href="https://rochesterworks.org" target="_blank" rel="noopener">rochesterworks.org</a>
+</div></div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
+<header class="hero">
+  <div class="wrap hero-inner">
     <div>
-      <div class="hero-badge">On-Site Recruiting Event</div>
-      <h1>Recruiting 'Round<span>Rochester</span></h1>
-      <p class="hero-sub">Connecting talented Rochester job seekers with employers making a real impact in our community.</p>
-    </div>
-    <div class="countdown-box">
-      <div class="countdown-label">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Event Starts In
-      </div>
-      <div class="countdown-grid">
-        <div class="count-unit"><div class="count-num" id="cd-days">--</div><div class="count-word">Days</div></div>
-        <div class="count-unit"><div class="count-num" id="cd-hours">--</div><div class="count-word">Hours</div></div>
-        <div class="count-unit"><div class="count-num" id="cd-mins">--</div><div class="count-word">Mins</div></div>
-        <div class="count-unit"><div class="count-num" id="cd-secs">--</div><div class="count-word">Secs</div></div>
+      <p class="kicker">In partnership with Monroe Community College and Monroe County</p>
+      <h1><span class="outline">Downtown</span>Job Fair</h1>
+      <p class="when">Thursday, October 22, 2026 · 2–4pm</p>
+      <p class="where">MCC Downtown Campus, 321 State Street, Rochester</p>
+      <div class="actions">
+        <a class="btn btn-primary" id="registerBtn" href="#" target="_blank" rel="noopener">Register for free</a>
+        <a class="btn btn-ghost" id="mapBtn" href="#" target="_blank" rel="noopener">Get directions</a>
       </div>
     </div>
+    <div class="countdown" aria-live="polite">
+      <p class="cd-label" id="cdLabel">Doors open in</p>
+      <div class="cd-grid" id="cdGrid">
+        <div><div class="cd-num" id="cdD">--</div><div class="cd-unit">days</div></div>
+        <div><div class="cd-num" id="cdH">--</div><div class="cd-unit">hours</div></div>
+        <div><div class="cd-num" id="cdM">--</div><div class="cd-unit">minutes</div></div>
+        <div><div class="cd-num" id="cdS">--</div><div class="cd-unit">seconds</div></div>
+      </div>
+      <p class="cd-status" id="cdStatus" hidden></p>
+    </div>
   </div>
-</section>
+  <svg class="skyline" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="#16263A" d="M0 150V112h40V96h28v16h30V70h22V52h10v18h24v42h36V84h40v28h22V40h12V22h6v18h14v72h30V92h46V60h20v52h28V78h34v34h40V30h8V10h4v20h8v82h26V88h50v24h34V58h30v54h22V96h44V70h26v42h40V48h12V36h18v12h10v64h30V90h48v22h26V66h38v46h30V84h22V54h14v58h44V94h36v18h28V74h40v38h34V44h20v68h26V88h46v24h38V62h30v50h34V98h40v14h30V80h26v32h40V100h30v50z"/>
+  </svg>
+</header>
 
-<!-- INFO STRIP -->
-<div class="info-strip">
-  <div class="info-card">
-    <div class="info-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-    </div>
-    <div>
-      <strong>Thursday, April 2</strong>
-      <span>2026</span>
-    </div>
-  </div>
-  <div class="info-card">
-    <div class="info-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-    </div>
-    <div>
-      <strong>9:00 AM - 11:00 AM</strong>
-      <span>2 Hours of Opportunity</span>
-    </div>
-  </div>
-  <div class="info-card">
-    <div class="info-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-    </div>
-    <div>
-      <strong>100 College Ave</strong>
-      <span>Rochester, NY &mdash; <a href="https://maps.app.goo.gl/ECAbsFd6it1XJDvj7" target="_blank">Second Floor</a></span>
-    </div>
-  </div>
+<div class="facts wrap" style="padding:0;max-width:none">
+  <div class="fact"><h2>When</h2><p>Thu, Oct 22 · 2–4pm</p></div>
+  <div class="fact"><h2>Where</h2><p>MCC Downtown, 321 State St</p></div>
+  <div class="fact"><h2>Parking</h2><p>Free in Lot AA</p></div>
+  <div class="fact"><h2>Cost</h2><p>Free and open to all</p></div>
 </div>
 
-<!-- MAIN CONTENT -->
-<div class="main-grid">
+<main class="wrap">
 
-  <!-- EMPLOYERS -->
-  <div id="employers">
-    <div class="section-header">
-      <h2>Participating Employers</h2>
-      <p>Learn about our partners and browse open roles</p>
+  <section aria-labelledby="sponsorsHead">
+    <h2 class="sec" id="sponsorsHead">Event sponsors</h2>
+    <p class="lede">Stop by and meet the teams from this year's sponsors.</p>
+    <div class="sponsors" id="sponsorList"></div>
+  </section>
+
+  <section aria-labelledby="empHead">
+    <h2 class="sec" id="empHead">Nearly 60 employers hiring</h2>
+    <p class="lede">Full-time, part-time, entry-level and experienced roles. Select an employer to see their current openings before you go.</p>
+
+    <div class="tools">
+      <label class="search">
+        <span class="visually-hidden" style="position:absolute;left:-9999px">Search employers</span>
+        <input id="q" type="search" placeholder="Search by employer or industry" autocomplete="off">
+      </label>
+      <span class="count" id="count" aria-live="polite"></span>
     </div>
+    <div class="chips" id="chips" role="group" aria-label="Filter by industry"></div>
+    <ul class="emp-list" id="empList"></ul>
+    <div class="empty" id="empty" hidden>No employers match that search. <button type="button" id="clearBtn">Show all employers</button></div>
+    <p class="note">Employer list subject to change.</p>
+  </section>
 
-    <div class="search-bar">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" id="search-input" placeholder="Search roles..." oninput="filterJobs(this.value)">
+  <section aria-labelledby="prepHead">
+    <h2 class="sec" id="prepHead">Make the two hours count</h2>
+    <p class="lede">A few things that help job seekers walk out with real next steps.</p>
+    <div class="prep">
+      <div><h3>Pick your top five</h3><p>Use the list above to choose the employers you want to reach first, and look at their openings tonight.</p></div>
+      <div><h3>Bring printed resumes</h3><p>Ten copies is a safe number. Recruiters still collect paper at in-person fairs.</p></div>
+      <div><h3>Have a 30-second intro</h3><p>Your name, the kind of work you want, and one strength. Then ask what they're hiring for right now.</p></div>
     </div>
+  </section>
 
-    <!-- Sunshine Village -->
-    <div class="employer-card" data-employer="sunshine">
-      <div class="employer-accent accent-sunshine"></div>
-      <div class="employer-header" onclick="toggleCard(this)">
-        <div class="employer-info">
-          <div class="employer-logo logo-sunshine">☀️</div>
-          <div>
-            <div class="employer-name"><a href="http://www.sunshinevillagechildcare.com/" target="_blank" style="color:inherit;text-decoration:none;border-bottom:2px solid rgba(245,166,35,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#f5a623'" onmouseout="this.style.borderColor='rgba(245,166,35,0.4)'">Sunshine Village Childcare Center</a></div>
-            <div class="employer-desc">Providing a village of care for children in the Rochester community.</div>
-          </div>
-        </div>
-        <button class="toggle-btn">
-          Open Positions
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-      </div>
-      <div class="jobs-panel">
-        <div class="jobs-grid">
-          <div class="job-item" data-role="drivers"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Drivers</div>
-          <div class="job-item" data-role="teachers"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Teachers</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Center for Youth -->
-    <div class="employer-card" data-employer="youth">
-      <div class="employer-accent accent-youth"></div>
-      <div class="employer-header" onclick="toggleCard(this)">
-        <div class="employer-info">
-          <div class="employer-logo logo-youth">🤝</div>
-          <div>
-            <div class="employer-name"><a href="https://centerforyouth.isolvedhire.com/jobs/" target="_blank" style="color:inherit;text-decoration:none;border-bottom:2px solid rgba(59,110,246,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#3b6ef6'" onmouseout="this.style.borderColor='rgba(59,110,246,0.4)'">The Center for Youth</a></div>
-            <div class="employer-desc">Empowering youth to reach their full potential through counseling, shelter, and support.</div>
-          </div>
-        </div>
-        <button class="toggle-btn">
-          Open Positions
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-      </div>
-      <div class="jobs-panel">
-        <div class="jobs-grid">
-          <div class="job-item" data-role="assistant program manager"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Assistant Program Manager</div>
-          <div class="job-item" data-role="childcare provider"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Childcare Provider</div>
-          <div class="job-item" data-role="community navigator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Community Navigator</div>
-          <div class="job-item" data-role="community prevention counselor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Community Prevention Counselor</div>
-          <div class="job-item" data-role="emergency shelter case manager"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Emergency Shelter Case Manager</div>
-          <div class="job-item" data-role="emergency shelter counselor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Emergency Shelter Counselor</div>
-          <div class="job-item" data-role="family navigator crisis nursery"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Family Navigator - Crisis Nursery</div>
-          <div class="job-item" data-role="life skills specialist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Life Skills Specialist</div>
-          <div class="job-item" data-role="prevention education specialist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Prevention Education Specialist</div>
-          <div class="job-item" data-role="rapid rehousing specialist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Rapid Rehousing Specialist</div>
-          <div class="job-item" data-role="school-based counselor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>School-Based Counselor</div>
-          <div class="job-item" data-role="street outreach specialist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Street Outreach Specialist</div>
-          <div class="job-item" data-role="workforce recruitment retention manager"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Workforce Recruitment and Retention Manager</div>
-          <div class="job-item" data-role="youth engagement advocate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Youth Engagement Advocate</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- EPI -->
-    <div class="employer-card" data-employer="epi">
-      <div class="employer-accent accent-epi"></div>
-      <div class="employer-header" onclick="toggleCard(this)">
-        <div class="employer-info">
-          <div class="employer-logo logo-epi">✨</div>
-          <div>
-            <div class="employer-name"><a href="https://www.epiny.org/careers/" target="_blank" style="color:inherit;text-decoration:none;border-bottom:2px solid rgba(147,51,234,0.4);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#9333ea'" onmouseout="this.style.borderColor='rgba(147,51,234,0.4)'">Empowering People's Independence (EPI)</a></div>
-            <div class="employer-desc">Providing comprehensive support and services for people with disabilities.</div>
-          </div>
-        </div>
-        <button class="toggle-btn">
-          Open Positions
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-      </div>
-      <div class="jobs-panel">
-        <div class="jobs-grid">
-          <div class="job-item" data-role="behavioral tech supervisor lcsw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Behavioral Tech Supervisor (LCSW)</div>
-          <div class="job-item" data-role="community direct support professional"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Community Direct Support Professional</div>
-          <div class="job-item" data-role="maintenance technician days"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Maintenance Technician (Days)</div>
-          <div class="job-item" data-role="quality improvement specialist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Quality Improvement Specialist</div>
-          <div class="job-item" data-role="residential direct support professional"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Residential Direct Support Professional</div>
-          <div class="job-item" data-role="residential supervisor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Residential Supervisor</div>
-          <div class="job-item" data-role="self-direction coordinator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Self-Direction Coordinator</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="no-results" id="no-results">No roles match your search. Try a different keyword.</div>
-  </div>
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-
-    <!-- Register CTA -->
-    <div class="sidebar-card cta-card">
-      <h3>Secure Your Spot</h3>
-      <p>Pre-registration is encouraged! We'll send you event updates and a professional reminder the day before.</p>
-      <a href="https://www.eventbrite.com/e/on-site-recruiting-event-at-rochesterworks-42-tickets-1985283152351" target="_blank" class="btn-full btn-white">
-        Register on Eventbrite
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-      </a>
-    </div>
-
-    <!-- Location -->
-    <div class="sidebar-card" id="location">
-      <div class="loc-label">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Event Location
-      </div>
-      <h3>RochesterWorks Career Center</h3>
-      <div class="address-block">
-        <a href="https://maps.app.goo.gl/ECAbsFd6it1XJDvj7" target="_blank">100 College Ave, Second Floor</a><br>
-        Rochester, NY 14607
-      </div>
-      <div class="map-placeholder">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      </div>
-      <a href="https://maps.app.goo.gl/ECAbsFd6it1XJDvj7" target="_blank" class="btn-full btn-outline-dark" style="background:#f4f7ff;color:var(--rw-blue);border:1.5px solid var(--rw-border);">
-        Open Google Maps
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-      </a>
-    </div>
-
-    <!-- Resume Support -->
-    <div class="sidebar-card resume-card">
-      <div class="chat-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      </div>
-      <h3>Resume Support</h3>
-      <p>Need a professional review before the event? Meet with an advisor for free.</p>
-      <a href="https://outlook.office365.com/book/ISABookings@RochesterWorks490.onmicrosoft.com/?ismsaljsauthenabled=true" target="_blank" class="btn-full btn-green">
-        Book Appointment
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      </a>
-    </div>
-
-    <!-- Tips -->
-    <div class="sidebar-card">
-      <h3>Day-of Tips</h3>
-      <ul class="tips-list">
-        <li><div class="tip-dot"></div>Bring multiple copies of your resume</li>
-        <li><div class="tip-dot"></div>Dress professionally for success</li>
-        <li><div class="tip-dot"></div>No proof of registration needed - just show up!</li>
-        <li><div class="tip-dot"></div>Arrive early - event runs 9:00-11:00 AM only</li>
-        <li><div class="tip-dot"></div>Come ready to connect with recruiters directly</li>
-      </ul>
-    </div>
-
+  <aside class="access" aria-labelledby="accessHead">
+    <h2 id="accessHead">Need an accommodation?</h2>
+    <p>RochesterWorks is an equal opportunity program. Auxiliary aids and services, including ASL interpretation, are available on request. Contact Vivian Degro at <a href="mailto:vdegro@rochesterworks.org">vdegro@rochesterworks.org</a> by Friday, October 16, 2026.</p>
   </aside>
-</div>
+</main>
 
-<!-- FOOTER -->
 <footer>
-  <strong>RochesterWorks</strong>
-  RochesterWorks is an equal opportunity program. Auxiliary aids and services are available upon request for individuals with disabilities.<br>
-  Call <a href="tel:5852583500">585-258-3500</a> to speak with a representative.<br><br>
-  <a href="https://rochesterworks.org" target="_blank">rochesterworks.org</a>
+  <div class="wrap">
+    <p>Presented by RochesterWorks in partnership with Monroe Community College and Monroe County.</p>
+    <p><a href="https://rochesterworks.org" target="_blank" rel="noopener">rochesterworks.org</a> · 585-258-3500</p>
+  </div>
 </footer>
 
 <script>
-  // COUNTDOWN
-  const eventDate = new Date('2026-04-02T09:00:00');
+/* ---------- Event settings: edit here ---------- */
+const EVENT_START = new Date("2026-10-22T14:00:00-04:00");
+const EVENT_END   = new Date("2026-10-22T16:00:00-04:00");
+const REGISTER_URL = "https://tinyurl.com/downtownjobfair-thurs-oct22";
+const MAP_URL = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("MCC Downtown Campus, 321 State Street, Rochester, NY 14608");
 
-  function updateCountdown() {
-    const now = new Date();
-    const diff = eventDate - now;
-    if (diff <= 0) {
-      document.getElementById('cd-days').textContent = '0';
-      document.getElementById('cd-hours').textContent = '0';
-      document.getElementById('cd-mins').textContent = '0';
-      document.getElementById('cd-secs').textContent = '0';
-      return;
-    }
-    const days = Math.floor(diff / 86400000);
-    const hours = Math.floor((diff % 86400000) / 3600000);
-    const mins = Math.floor((diff % 3600000) / 60000);
-    const secs = Math.floor((diff % 60000) / 1000);
-    document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
-    document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
-    document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+/* To link an employer straight to its careers page, add jobs:"https://..."
+   Otherwise the card opens a search for that employer's Rochester openings. */
+const EMPLOYERS = [
+  {name:"Alliance Precision Plastics", ind:"Manufacturing"},
+  {name:"Anthony Jordan Health Center", ind:"Healthcare"},
+  {name:"Barilla America NY", ind:"Food production"},
+  {name:"Bausch + Lomb", ind:"Manufacturing"},
+  {name:"Ber-National Automation", ind:"Manufacturing"},
+  {name:"Beyond TalentEdge", ind:"Staffing"},
+  {name:"Boss Precision", ind:"Manufacturing"},
+  {name:"Bounce AI", ind:"Technology"},
+  {name:"Brinkman International Group", ind:"Manufacturing"},
+  {name:"Catholic Charities / Steps To Success", ind:"Human services"},
+  {name:"Center for Youth Services", ind:"Human services"},
+  {name:"Cintas", ind:"Retail & services"},
+  {name:"Companion Care of Rochester (CCOR)", ind:"Healthcare"},
+  {name:"Corning", ind:"Manufacturing", sponsor:true},
+  {name:"Delta Sonic Car Wash Systems", ind:"Retail & services"},
+  {name:"DePaul", ind:"Human services"},
+  {name:"East Irondequoit Central School District", ind:"Education"},
+  {name:"Elderwood of Lakeside at Brockport", ind:"Healthcare"},
+  {name:"Empowering People's Independence (EPI)", ind:"Human services"},
+  {name:"ESL Federal Credit Union", ind:"Finance & insurance"},
+  {name:"Exxelia", ind:"Manufacturing"},
+  {name:"Fitch Construction", ind:"Skilled trades"},
+  {name:"Gates Albert", ind:"Manufacturing"},
+  {name:"Home Depot", ind:"Retail & services"},
+  {name:"Ironwood Power Services", ind:"Skilled trades"},
+  {name:"Kodak", ind:"Manufacturing"},
+  {name:"Lakeview Health Services", ind:"Healthcare"},
+  {name:"Lewis Services", ind:"Retail & services"},
+  {name:"LiDestri Foods", ind:"Food production"},
+  {name:"Lifetime Assistance", ind:"Human services"},
+  {name:"Love Beets", ind:"Food production"},
+  {name:"Monroe Community Hospital", ind:"Healthcare"},
+  {name:"Monroe County Board of Elections", ind:"Government"},
+  {name:"Monroe County Department of Civil Services", ind:"Government"},
+  {name:"Nesco Resource", ind:"Staffing"},
+  {name:"New York Life", ind:"Finance & insurance"},
+  {name:"Novolex", ind:"Manufacturing"},
+  {name:"NYS Department of Civil Service", ind:"Government"},
+  {name:"PICS Telecom", ind:"Technology"},
+  {name:"Planned Parenthood of CWNY", ind:"Healthcare"},
+  {name:"Premier Genesee Center for Nursing and Rehab", ind:"Healthcare"},
+  {name:"Qualitrol Company", ind:"Manufacturing"},
+  {name:"RM Landscape", ind:"Skilled trades"},
+  {name:"Rochester City School District (RCSD)", ind:"Education"},
+  {name:"Rochester Institute of Technology", ind:"Education"},
+  {name:"RochesterWorks", ind:"Human services"},
+  {name:"RTMA", ind:"Manufacturing"},
+  {name:"Rush Henrietta CSD", ind:"Education"},
+  {name:"Stellar Roofing", ind:"Skilled trades"},
+  {name:"SUNY Geneseo", ind:"Education"},
+  {name:"The Gleason Works", ind:"Manufacturing", sponsor:true},
+  {name:"University of Rochester", ind:"Education"},
+  {name:"University of Rochester – Safety & Security", ind:"Education"},
+  {name:"Wegmans", ind:"Retail & services"},
+  {name:"Workfit Medical Staffing", ind:"Staffing"},
+  {name:"Xcelerate Solutions", ind:"Technology"},
+  {name:"YMCA", ind:"Human services"},
+  {name:"Yoh", ind:"Staffing"}
+];
+/* ----------------------------------------------- */
+
+document.getElementById("registerBtn").href = REGISTER_URL;
+document.getElementById("mapBtn").href = MAP_URL;
+
+const jobsLink = e => e.jobs || ("https://www.google.com/search?q=" + encodeURIComponent(e.name + " jobs Rochester NY"));
+const esc = s => s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+/* Sponsors */
+document.getElementById("sponsorList").innerHTML = EMPLOYERS.filter(e => e.sponsor).map(e =>
+  `<div class="sponsor"><div><h3>${esc(e.name)}</h3><p>${esc(e.ind)}</p></div>
+   <a href="${jobsLink(e)}" target="_blank" rel="noopener">See open jobs</a></div>`).join("");
+
+/* Filters */
+const industries = ["All", ...[...new Set(EMPLOYERS.map(e => e.ind))].sort()];
+let active = "All";
+const chips = document.getElementById("chips");
+chips.innerHTML = industries.map(i => {
+  const n = i === "All" ? EMPLOYERS.length : EMPLOYERS.filter(e => e.ind === i).length;
+  return `<button type="button" class="chip" data-ind="${esc(i)}" aria-pressed="${i === "All"}">${esc(i)}<span class="n">${n}</span></button>`;
+}).join("");
+chips.addEventListener("click", ev => {
+  const b = ev.target.closest(".chip"); if (!b) return;
+  active = b.dataset.ind;
+  chips.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c === b));
+  render();
+});
+
+const q = document.getElementById("q");
+q.addEventListener("input", render);
+document.getElementById("clearBtn").addEventListener("click", () => {
+  q.value = ""; active = "All";
+  chips.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.ind === "All"));
+  render(); q.focus();
+});
+
+function render(){
+  const term = q.value.trim().toLowerCase();
+  const list = EMPLOYERS.filter(e =>
+    (active === "All" || e.ind === active) &&
+    (!term || e.name.toLowerCase().includes(term) || e.ind.toLowerCase().includes(term)));
+  document.getElementById("empList").innerHTML = list.map(e =>
+    `<li class="emp"><a href="${jobsLink(e)}" target="_blank" rel="noopener">
+      <span class="emp-name">${esc(e.name)}</span>
+      <span class="emp-meta">${esc(e.ind)}${e.sponsor ? ' <span class="tag-sponsor">Sponsor</span>' : ""}<span class="emp-jobs">Open jobs</span></span>
+    </a></li>`).join("");
+  document.getElementById("empty").hidden = list.length > 0;
+  document.getElementById("count").textContent =
+    list.length === EMPLOYERS.length ? `${list.length} employers` : `${list.length} of ${EMPLOYERS.length} employers`;
+}
+render();
+
+/* Countdown */
+const pad = n => String(n).padStart(2, "0");
+function tick(){
+  const now = new Date();
+  const grid = document.getElementById("cdGrid"), status = document.getElementById("cdStatus"), label = document.getElementById("cdLabel");
+  if (now >= EVENT_START){
+    grid.hidden = true; status.hidden = false;
+    if (now < EVENT_END){ label.textContent = "Right now"; status.textContent = "The job fair is open until 4pm"; }
+    else { label.textContent = "October 22, 2026"; status.textContent = "This job fair has ended. Thanks for coming!"; }
+    return;
   }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-
-  // TOGGLE CARDS
-  function toggleCard(header) {
-    const panel = header.nextElementSibling;
-    const btn = header.querySelector('.toggle-btn');
-    const isOpen = panel.classList.contains('open');
-    panel.classList.toggle('open', !isOpen);
-    btn.classList.toggle('open', !isOpen);
-    btn.querySelector('span') && (btn.querySelector('span').textContent = isOpen ? 'Open Positions' : 'Hide Jobs');
-  }
-
-  // SEARCH
-  function filterJobs(query) {
-    const q = query.toLowerCase().trim();
-    const cards = document.querySelectorAll('.employer-card');
-    let totalVisible = 0;
-
-    cards.forEach(card => {
-      const items = card.querySelectorAll('.job-item');
-      let cardVisible = 0;
-      items.forEach(item => {
-        const role = item.getAttribute('data-role').toLowerCase();
-        const match = !q || role.includes(q);
-        item.style.display = match ? '' : 'none';
-        if (match) cardVisible++;
-      });
-
-      if (q && cardVisible > 0) {
-        card.style.display = '';
-        const panel = card.querySelector('.jobs-panel');
-        const btn = card.querySelector('.toggle-btn');
-        panel.classList.add('open');
-        btn.classList.add('open');
-        totalVisible += cardVisible;
-      } else if (q && cardVisible === 0) {
-        card.style.display = 'none';
-      } else {
-        card.style.display = '';
-        totalVisible += items.length;
-      }
-    });
-
-    document.getElementById('no-results').style.display = (q && totalVisible === 0) ? 'block' : 'none';
-  }
+  let s = Math.floor((EVENT_START - now) / 1000);
+  const d = Math.floor(s / 86400); s %= 86400;
+  const h = Math.floor(s / 3600); s %= 3600;
+  const m = Math.floor(s / 60); s %= 60;
+  document.getElementById("cdD").textContent = d;
+  document.getElementById("cdH").textContent = pad(h);
+  document.getElementById("cdM").textContent = pad(m);
+  document.getElementById("cdS").textContent = pad(s);
+}
+tick(); setInterval(tick, 1000);
 </script>
 </body>
 </html>
